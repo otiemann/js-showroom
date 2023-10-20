@@ -1,0 +1,8 @@
+function myFunction(a) {
+    for(let i = 0; i < 3; i++) {
+        a.shift();
+    }
+    console.table(a);
+}
+
+myFunction([1,2,3,4,5]);

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Übungsaufgabe 2</title>
+  </head>
+  <body>
+    <input id="zahl1" type="number" placeholder="Geben Sie die erste Zahl ein">
+    <input id="zahl2" type="number" placeholder="Geben Sie die zweite Zahl ein">
+    <button onclick="zeigeSumme()">Summe berechnen</button>
+    <p id="summeText"></p>
+    <script>
+      function zeigeSumme() {
+        let zahl1 = parseFloat(document.getElementById("zahl1").value);
+        let zahl2 = parseFloat(document.getElementById("zahl2").value);
+        let summeText = document.getElementById("summeText");
+        summeText.innerHTML = "Die Summe ist: " + (zahl1 + zahl2);
+      }
+    </script>
+  </body>
+</html>

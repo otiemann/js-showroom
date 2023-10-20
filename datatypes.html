@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div id="form">
+        <input type="text" id="vorname">
+        <input type="text" id="name">
+        <button id="button" onclick="ausgabe();">Ausgabe erzeugen</button>
+   </div>
+   <div id="ausgabe">
+
+   </div>
+   <script>
+        function ausgabe() {
+            let vorname = document.getElementById('vorname').value;
+            let name = document.getElementById('name').value;
+            document.getElementById('ausgabe').style.fontWeight = 'bold';
+            document.getElementById('ausgabe').style.fontSize = '20px';
+            document.getElementById('ausgabe').style.paddingTop = '10px';
+            document.getElementById('ausgabe').innerHTML = 'Hallo ' + vorname + ' ' + name + '!';
+        }
+    </script>
+</body>
+</html>

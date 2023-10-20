@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Übungsaufgabe 1</title>
+</head>
+
+<body>
+    <input id="nameInput" size="50" type="text" placeholder="Geben Sie Ihren Namen ein">
+    <button onclick="begruesseBenutzer()">Begrüßen</button>
+    <p id="begruesseText"></p>
+    <script>
+        function begruesseBenutzer() {
+            let nameInput = document.getElementById("nameInput");
+            let begruesseText = document.getElementById("begruesseText");
+            begruesseText.innerHTML = "Hallo, " + nameInput.value + "!";
+        }
+    </script>
+</body>
+
+</html>

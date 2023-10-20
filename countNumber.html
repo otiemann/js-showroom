@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Number App</title>
+  <style>
+    #container {
+        margin: 10px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .center {
+        text-align: center;
+    }
+    .knopf {
+        width: 150px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-weight: bold;
+    }
+    #minus {
+        background-color: red;
+    }
+    #reset {
+        background-color: lightgray;
+    }
+    #plus {
+        background-color: green;
+    }
+    #buttons {
+        margin: 10px;
+    }
+    #number {
+        font-size:40px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="container">
+    <div id="title" class="center">
+        <h1>Count Number App</h1>
+    </div>
+    <div id="number" class="center">
+        0
+    </div>
+    <div id="buttons" class="center">
+        <button id="minus" class="knopf" onclick="decrease();">Herunterzählen</button>
+        <button id="reset" class="knopf" onclick="reset();">Zurücksetzen</button>
+        <button id="plus" class="knopf" onclick="increase();">Hochzählen</button>
+    </div>
+</div>
+<script>
+    let zaehler = 0;
+    let inhalt = document.getElementById('number');
+    function decrease() {
+        zaehler -= 1;
+        inhalt.innerHTML = zaehler;
+    }
+    function increase() {
+        zaehler += 1;
+        inhalt.innerHTML = zaehler;
+    }
+    function reset() {
+        zaehler = 0;
+        inhalt.innerHTML = zaehler;
+    }
+</script>
+</body>
+</html>

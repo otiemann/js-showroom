@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Slider</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #box {
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            margin-bottom: 20px;
+            outline: 1px solid black;
+        }
+
+        #slider {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box">
+
+        </div>
+        <div id="slider">
+            <input type="range" min="0" max="100" value="0">
+        </div>
+    </div>
+    <script>
+        let sldElement = document.getElementById('slider').children[0];
+        let boxElement = document.getElementById('box');
+        sldElement.addEventListener('input', () => {
+            let borderSize = sldElement.value;
+            boxElement.style.border = borderSize + 'px solid white';
+            boxElement.style.width = (400 - borderSize * 2) + 'px';
+            boxElement.style.height = (400 - borderSize * 2) + 'px';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="checkbox" disabled/>
+    <label for="checkbox">checkbox</label>
+    <button type="button" id="button">Verify Code</button>
+    <script>
+        const button = document.getElementById('button');
+        button.addEventListener('click', () => {
+            const checkbox = document.getElementById('checkbox');
+            checkbox.disabled = false;
+            if (checkbox.checked === false) {
+                checkbox.checked = true;
+            }
+            else {
+                checkbox.checked = false;
+            }            
+        });
+
+        let personen = [
+            {name: "Anna", alter: 25},
+            {name: "Max", alter: 30},
+            {name: "Lisa", alter: 28}
+        ];
+        console.table(personen);
+        console.warn("Das ist eine Warnung");
+        console.error("Das ist ein Fehler");
+    </script>
+</body>
+</html>

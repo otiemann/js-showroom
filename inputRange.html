@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Range Slider</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container {
+            width: 400px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px;
+        }
+        #box {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box"></div>
+        <div id="number">0%</div>
+        <div id="slider"><input type="range" min="0" max="100" value="0"></div>
+    </div>
+    <script>
+        let sldElement = document.getElementById('slider').children[0];
+        let numberDiv = document.getElementById('number');
+        let boxElement = document.getElementById('box');
+        sldElement.addEventListener('input', () => {
+            let zaehler = sldElement.value;
+            numberDiv.innerHTML = zaehler + '%';
+            boxElement.style.borderRadius = zaehler + '%';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Übung 2</title>
+  </head>
+  <body>
+    <button onclick="toggleElement()">Ein-/Ausblenden</button>
+    <p id="versteckterText">Dieser Text wird ein- und ausgeblendet.</p>
+    <script>
+        function toggleElement() {
+            let versteckterText = document.getElementById("versteckterText");
+            if (versteckterText.style.display === "none") {
+                versteckterText.style.display = "block";
+            } else {
+                versteckterText.style.display = "none";
+            }
+        }
+
+    </script>
+  </body>
+</html>

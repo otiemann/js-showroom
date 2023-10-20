@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let zahl1 = Number(prompt('Bitte Zahl 1 eingeben:'));
+        let zahl2 = Number(prompt('Bitte Zahl 2 eingeben: '));
+        document.write('Ihre Eingaben: ' + zahl1 + ' und ' + zahl2 + '<br><br>');
+        if (zahl1 > zahl2) {
+            document.write('Die größere Zahl ist ' + zahl1);
+        }
+        else {
+            if (zahl1 < zahl2) {
+            document.write('Die größere Zahl ist ' + zahl2);
+            }
+            else {
+            document.write('Die beiden Zahlen sind gleich.');
+            }
+        }
+    </script>
+</body>
+</html>

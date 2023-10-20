@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> // Erstellen Sie ein neues Div-Element
+ let div = document.createElement('div');
+// Setzen Sie die ID des Div-Elements
+div.id = 'ausgabe';
+// Fügen Sie das Div-Element zum Body hinzu
+document.body.appendChild(div);
+        let text = "";
+        let weltmeister = [];
+weltmeister = [1954, 1974, 1990, 2014];
+let weltmeistertrainer = ["Sepp Herberger", "Helmut Schön", "Franz Beckenbauer", "Joachim Löw"];
+for (let i = 0; i < weltmeister.length; i++) {
+    document.getElementById('ausgabe').innerHTML += weltmeister[i] + " " + weltmeistertrainer[i] + '<br>';
+}
+
+    </script>
+</body>
+</html>

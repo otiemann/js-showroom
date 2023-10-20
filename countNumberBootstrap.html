@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Number App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container text-center">
+    <h1 class="my-3">Count Number App</h1>
+    <div id="number" class="display-4">
+        0
+    </div>
+    <div class="btn-group my-3" role="group">
+        <button id="minus" class="btn btn-danger" onclick="decrease();">Herunterzählen</button>
+        <button id="reset" class="btn btn-secondary" onclick="reset();">Zurücksetzen</button>
+        <button id="plus" class="btn btn-success" onclick="increase();">Hochzählen</button>
+    </div>
+</div>
+<script>
+    let zaehler = 0;
+    let inhalt = document.getElementById('number');
+    function decrease() {
+        zaehler -= 1;
+        inhalt.innerHTML = zaehler;
+    }
+    function increase() {
+        zaehler += 1;
+        inhalt.innerHTML = zaehler;
+    }
+    function reset() {
+        zaehler = 0;
+        inhalt.innerHTML = zaehler;
+    }
+</script>
+</body>
+</html>

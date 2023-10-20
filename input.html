@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eingabefelder mit Javascript auslesen</title>
+</head>
+<body>
+    <h1>Bruttopreisrechner</h1>
+    
+        <label for="price">Preis in Euro:</label><br>
+        <input type="number" id="price" name="price"><br>
+        <p>Mehrwertsteuersatz:</p>
+        <input type="radio" id="vat7" name="vat" value="7">
+        <label for="vat7">7%</label><br>
+        <input type="radio" id="vat19" name="vat" value="19">
+        <label for="vat15">19%</label><br>
+        <button style="margin-top:10px; margin-bottom:10px;" onclick="ausgabe();">Berechnen</button>
+    
+    <div id="ausgabe">
+
+    </div>
+
+    <script>
+        function ausgabe() {
+            let price = document.getElementById('price').value;
+            if (document.getElementById('vat7').checked) {
+                price = price * 1.07;
+            } else if (document.getElementById('vat19').checked) {
+                price = price * 1.19;
+            }
+            document.getElementById('ausgabe').style.fontWeight = 'bold';
+            document.getElementById('ausgabe').innerHTML = 'Der Bruttopreis inklusive Mehrwertsteuer beträgt ' + price.toFixed(2) + ' Euro.';
+            
+        }
+    </script>
+</body>
+</html>

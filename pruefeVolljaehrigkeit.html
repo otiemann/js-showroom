@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Übungsaufgabe 3</title>
+  </head>
+  <body>
+    <input id="alterInput" type="number" placeholder="Geben Sie Ihr Alter ein">
+    <button onclick="pruefeVolljaehrigkeit()">Prüfen</button>
+    <p id="ergebnisText"></p>
+    <script>
+      function pruefeVolljaehrigkeit() {
+        let alterInput = document.getElementById("alterInput");
+        let alter = parseInt(alterInput.value);
+        let ergebnisText = document.getElementById("ergebnisText");
+
+        if (alter >= 18) {
+          ergebnisText.innerHTML = "Sie sind volljährig.";
+        } else
+        {
+      ergebnisText.innerHTML = "Sie sind nicht volljährig.";
+    }
+  }
+</script>
+  </body>
+</html>
